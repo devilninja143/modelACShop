@@ -5,4 +5,4 @@ Note: I didn't use any bootstrap although it will be lot cleaner if I use it thr
 
 ## Here is a picture DEMO
 
-!("./demo.jpeg")["Website Demo"]
+!["Website Demo"](./demo.jpeg)
