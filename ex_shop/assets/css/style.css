@@ -1,0 +1,276 @@
+@import "./intro-cont.css";
+@import "./latest_product.css";
+@import "./comment_section.css";
+@import "./footer.css";
+@import "./cart.css";
+@import "./loading_screen.css";
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+:root{
+    --main-color: rgb(27, 26, 26);
+    --secondary-color: rgb(39, 39, 39);
+    --body-color: #fff;
+    --primary-color: #00022F;
+    --complement-color: #181818;
+    --festive-style: 'Festive', cursive;
+    --normal-style: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+    --bend-style: 'Syne Tactile', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* test class */
+/* #navbar *{
+    border: 1px #000 solid!important;
+} */
+/* #main_container *{
+    border: 1px #000 solid;
+} */
+/* end of test class */
+#navbar{
+    display: flex;
+    /* border: 5px #000 solid; */
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    right: 0%;
+    background: #fff;
+    z-index: 2;
+    font-family: var(--normal-style);
+}
+/* navbar header */
+#navbar #nav-header{
+    flex: 1;
+}
+#nav-header{
+    display: flex;
+    margin: auto 20px;
+    font-size: 1.5rem;
+}
+#nav-header #LOGO{
+    border-style: dotted!important;
+    border-width: 0.1px;
+    padding: 0px 5px;
+    font-weight: bolder;
+    height: fit-content;
+    margin: auto 10px;
+    margin-right: 0px;
+    transform: translateY(5px);
+}
+#nav-header .img-logo{
+    width: 40px;
+    height: auto;
+}
+#nav-header .img-logo img{
+    width: 100%;
+    height: 100%;
+}
+/* Account panel and nav-btn */
+#nav-list{
+    display: flex;
+    margin: auto 20px;
+    width: fit-content!important;
+}
+#nav-list #nav-btn{
+    width: fit-content!important;
+    height: fit-content!important;
+    display: flex;
+    margin: auto;
+    background: transparent;
+    border: 0px;
+    padding: 2px;
+}
+#nav-list #nav-btn:focus{
+    box-shadow: 0px 0px 1px #000;
+}
+#nav-list .account-panel{
+    display: flex;
+    margin: auto;
+    width: 110px;
+}
+#nav-list .account-panel .ac-btn{
+    height: fit-content;
+    margin: auto 5px;
+    color: var(--main-color);
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#account-panel-1{
+    display: none;
+}
+#account-panel-1 img{
+    margin: auto;
+}
+#account-panel-1 .ac-btn{
+    height: fit-content;
+    margin: auto;
+}
+/* navbar menu */
+.nav-items{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--complement-color);
+    z-index: 2;
+    overflow: hidden;
+    width: 500px;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+}
+.collapse{
+    /* width: 0px!important; */
+    transform: translateX(100%)!important;
+    transition: all 0.5s ease-in-out!important;
+    opacity: 0;
+}
+#nav-items ul{
+    margin: 0px auto!important;
+    list-style: none;
+    font-size: 1.2rem;
+    height: 80%;
+    text-transform: uppercase;
+    text-align: center;
+}
+#nav-items ul li{
+    margin: 20px 0px;
+}
+#nav-items ul li:nth-child(1){
+    margin-bottom: 50px;
+}
+#nav-items li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--body-color);
+}
+#nav-items li:hover a{
+    color: rgba(255, 255, 255, 0.384);
+}
+#nav-items #nav-close-btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-weight: bolder;
+    color: var(--body-color);
+    background-color: transparent;
+    border: 0px;
+    right: 10px;
+    top: 30px;
+}
+#nav-close-btn:focus{
+    border: 1px var(--body-color) solid!important;
+    border-radius: 5px;
+}
+#nav-close-btn svg{
+    width: 100%;
+    height: 100%;
+}
+/* search panel */
+#navbar .search-panel{
+    display: flex;
+    margin: 0px 5px;
+    position: relative;
+}
+#navbar .search-panel .search-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    right: 0%;
+    transform: rotateY(180deg);
+}
+#navbar .search-panel .search-input{
+    caret-color: green;
+    border: 0px;
+    font-size: 20px;
+    width: 200px;
+    padding: 5px 0px!important;
+    background-color: transparent;
+}
+#navbar .search-panel button{
+    border: 0px;
+    background: transparent;
+}
+#navbar .search-panel .search-input:focus{
+    outline: none;
+    border-bottom: 2px var(--main-color) solid!important;
+}
+/* CART */
+#cart{
+    height: fit-content;
+    margin: auto 10px;
+    font-weight: lighter;
+    width: 65px;
+    background-color: transparent;
+    border: 0px;
+    font-size: 1rem;
+}
+#cart .cart-value{
+    width: 20px!important;
+    height: 20px!important;
+    font-weight: bold;
+    font-size: 0.9rem!important;
+    color: #fff;
+    background: #000;
+    margin: auto;
+    padding: 0px 5px;
+    border-radius: 50%;
+}
+/* main content body */
+#main_container{
+    min-height: 100vh;
+    margin: 0px auto;
+    margin-top: 90px;
+    width: 90%;
+    font-family: var(--normal-style);
+}
+/* Tablet size */
+@media screen and (max-width:762px) {
+    /* search panel */
+    #navbar #search-panel-1{
+        position: fixed;
+        left: 0%;
+        top: 80px;
+        right: 0%;
+        margin: auto;
+        background: #fff;
+    }
+    #navbar #search-panel-1 .search-input{
+        width: 90%;
+        height: 50px;
+        margin-left: 20px;
+    }
+    #navbar .search-panel .search-icon{
+        top: calc(50% - 15px);
+        margin-right: 20px;
+    }
+    #main_container{
+        margin-top: 140px!important;
+    }
+}
+@media screen and (max-width:520px) {
+    #main_container #intro-cont{
+        background-position: -200px;
+    }
+    #navbar #account-panel{
+        display: none;
+    }
+    #nav-items{
+        width: 100%!important;
+    }
+    #nav-header{
+        font-size: 1.3rem!important;
+    }
+    #account-panel-1{
+        display: flex;
+    }
+}

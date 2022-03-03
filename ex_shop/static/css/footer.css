@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&family=Syne+Tactile&display=swap');
+#footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--complement-color);
+    font-family: var(--normal-style);
+    text-decoration: none;
+    color: var(--body-color);
+}
+#footer .main_footer{
+    display: flex;
+    width: 100%;
+}
+#footer .main_footer > *{
+    flex: 1;
+    margin: 0px auto;
+    list-style-type: none;
+}
+#footer .main_footer{
+    width: 90%;
+    margin: 30px auto;
+}
+#footer .main_footer a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--body-color);
+}
+#footer .main_footer a:hover{
+    opacity: 0.5;
+}
+#footer .main_footer label{
+    width: 100%;
+    font-size: 14px;
+}
+#footer .subscribe .inner-cont{
+    display: flex;
+    width: fit-content;
+}
+#footer .inner-cont .subscribe_input{
+    background: transparent;
+    border-bottom: 1px var(--body-color) solid!important;
+    border: 0px;
+}
+#footer .inner-cont .subscribe_input:focus{
+    outline: none;
+    border-bottom: 2px var(--body-color) solid!important;
+    caret-color: var(--body-color);
+}
+#footer .inner-cont #subscribe-btn{
+    padding: 5px;
+    margin-left: 10px;
+    color: var(--body-color);
+    background: transparent;
+    border: 1px var(--body-color) solid;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+}
+#footer .inner-cont #subscribe-btn:hover{
+    color: var(--main-color);
+    background-color: var(--body-color);
+}
+#footer .main_footer .subscribe{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+#footer .main_footer .subscribe div, 
+#footer .main_footer .subscribe label{
+    margin: 10px;
+}
+#footer .copyright{
+    height: 50px;
+    margin: 5px 0px;
+    font-family: 'Redressed', cursive;
+    display: flex;
+    background: #2e2d2d;
+    text-transform: capitalize;
+}
+#footer .copyright span{
+    margin: auto 10%;
+}
+@media screen and (max-width:520px) {
+    #footer .main_footer{
+        flex-direction: column-reverse!important;
+    }
+    #footer .main_footer > *{
+        margin: 10px 0px;
+    }
+}

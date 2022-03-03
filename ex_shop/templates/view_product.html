@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+    {% block link %}
+        <link rel="stylesheet" href="../static/css/product-view.css">
+    {% endblock link %}
+    {% block title %}
+        Product no-1
+    {% endblock title %}
+    {% block main %}
+    
+    <!-- Product View(full version) -->
+    <div id="product-view">
+        <div class="img-cont">
+            <img src="../static/img/shop-1.jpg" alt="product-img">
+            <div class="product-desc">
+                <h1 class="product-name">This is a Product</h1>
+                <div class="product-model">M-003</div>
+                <div class="product-seller">New Tech</div>
+                <div class="product-price">$24.00</div>
+                <div class="rate">
+                    <img src="../static/img/star.png" alt="" class="rate-icon">
+                    <span class="rate-text">4.5</span>
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dicta sunt rem minus eum expedita unde autem rerum consequatur in voluptatum ipsa, animi praesentium aut ratione. Iure, quas. Ullam, doloremque.
+                </div>
+            </div>
+        </div>
+        <div class="product-details">
+            <form action="#" class="product-form">
+                <div>
+                    <small class="product-serial">#0212s1.21s</small>
+    
+                    <h3 class="product-value">$24.00</h3>
+                    <label for="product-sizes" class="product-label">Sizes</label>
+                    <select name="product-sizes" id="product-sizes" placeholder="select">
+                        <option value="none">Select</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    <label for="product-quantity" class="product-label">Quantity</label>
+                    <input type="number" name="product-quantity" id="product-quantity" style="width: 70px!important;margin-left:20px!important;" placeholder="Qyt">
+                    <div class="product-form-btns">
+                        <a href="#" id="atc_btn">Add to cart</a>
+                        <button type="submit" id="buy_btn">Buy Now</button>
+                    </div>
+                </div>
+            </form>
+            <div id="other-info">
+                <div id="product-info" class="toggle-cont">
+                    <label for="toggle-box" class="toggle-cont-label">
+                        <span>Product Info</span><span>-</span>
+                    </label>
+                    <input type="checkbox" name="toggle-box" id="toggle-box">
+                    <div class="toggle-cont-content toggle-active">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur est perferendis temporibus nulla voluptates? Nesciunt tempora, placeat minus mollitia inventore, laborum corrupti obcaecati perspiciatis enim blanditiis ducimus magni velit similique?
+                        </p>
+                    </div>
+                </div>
+                <div id="return_policy" class="toggle-cont">
+                    <label for="toggle-box-1" class="toggle-cont-label">
+                        <span>Return Policy</span><span>-</span>
+                    </label>
+                    <input type="checkbox" name="toggle-box-1" id="toggle-box-1">
+                    <div class="toggle-cont-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur est perferendis temporibus nulla voluptates? Nesciunt tempora, placeat minus mollitia inventore, laborum corrupti obcaecati perspiciatis enim blanditiis ducimus magni velit similique?
+                        </p>
+                    </div>
+                </div>
+                <div id="shipping_info" class="toggle-cont">
+                    <label for="toggle-box-2" class="toggle-cont-label">
+                        <span>Shipping Info</span><span>-</span>
+                    </label>
+                    <input type="checkbox" name="toggle-box-2" id="toggle-box-2">
+                    <div class="toggle-cont-content">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur est perferendis temporibus nulla voluptates? Nesciunt tempora, placeat minus mollitia inventore, laborum corrupti obcaecati perspiciatis enim blanditiis ducimus magni velit similique?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock main %}

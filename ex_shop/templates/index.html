@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="short icon" href="/static/img/logo.png">
+    {% block link %}
+        
+    {% endblock link %}
+    <title>
+        {% block title %}
+            SHOPNOW
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <div id="loading_screen">
+        <div class="inner-cont">
+            <div class="loading-txt">
+                <h1 style="text-transform: uppercase;">Wellcome to SHOPNOW</h1>
+                Please Wait A While
+                <h1>Loading...</h1>
+            </div>
+            <div id="loading-box">
+                <div id="loading-bar"></div>
+                <div id="indicator"></div>
+            </div>
+        </div>
+    </div>
+    <!-- navbar start -->
+    <section id="navbar">
+        <div id="nav-header">
+            <div class="img-logo">
+                <img src="/static/img/logo.png" alt="">
+            </div>
+            <span id="LOGO">SHOPNOW</span>
+        </div>
+        <!-- nav menu -->
+        <div id="nav-items" class="nav-items collapse">
+            <!-- event_collapse is a function that you can get in main.js -->
+            <button id="nav-close-btn" onclick="event_collapse(this)" target="#nav-items">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                  </svg>
+            </button>
+            <ul>
+                <li class="nav-item">
+                    <div id="account-panel-1" class="account-panel">
+                        <img src="/static/img/person-icon-1680.png" style="height: 30px;" alt="perosn">
+                        <a href="" class="ac-btn">Devil</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/" class="nav-link">home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">shop</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">about us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+        <!-- nav menu end -->
+        <div id="nav-list">
+            <form id="search-panel-1" class="search-panel">
+                <input type="text" class="search-input" name="search-input" placeholder="Search...">
+                <button>
+                    <img src="/static/img/search.png" alt="" class="search-icon">
+                </button>
+            </form>
+            <div id="account-panel" class="account-panel">
+                <img src="/static/img/person-icon-1680.png" style="height: 30px;" alt="perosn">
+                <a href="" class="ac-btn">Devil</a>
+            </div>
+            <!-- event_collapse is a function that you can get in main.js -->
+            <button id="cart" onclick="event_collapse(this)" target="#cart-item">
+                CART&nbsp;<span class="cart-value">3</span>
+            </button>
+            <button id="nav-btn"  onclick="event_collapse(this)" target="#nav-items">
+                <img src="/static/img/menu.png" style="width: 25px;height:25px" alt="">
+            </button>
+        </div>
+    </section>
+    <!-- Cart Section -->
+    <form id="cart-item" class="cart-item collapse">
+            <!-- event_collapse is a function that you can get in main.js -->
+        <button type="button" class="cart-cls-btn" onclick="event_collapse(this)" target="#cart-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+        </button>
+        <div class="cart-header">Cart Item</div>
+        <div class="cart-cont">
+            <div class="card" data-id="1">
+                <div class="card-img">
+                    <span class="p-value">1</span>
+                    <img src="/static/img/dummy/1.jpg" alt="product_view">
+                </div>
+                <div class="card-body">
+                    <div class="card-header">This is a product</div>
+                    <div class="card-price">250$</div>
+                    <button type="button" class="card-btn">Add (+)</button>
+                    <button type="button" class="cart-rm-btn">Remove ( - )</button>
+                </div>
+            </div>
+            <div class="card" data-id="2">
+                <div class="card-img">
+                    <span class="p-value">1</span>
+                    <img src="/static/img/dummy/2.jpg" alt="product_view">
+                </div>
+                <div class="card-body">
+                    <div class="card-header">This is a product</div>
+                    <div class="card-price">250$</div>
+                    <button type="button" class="card-btn">Add (+)</button>
+                    <button type="button" class="cart-rm-btn">Remove ( - )</button>
+                </div>
+            </div>
+            <div class="card" data-id="3">
+                <div class="card-img">
+                    <span class="p-value">1</span>
+                    <img src="/static/img/dummy/3.jpg" alt="product_view">
+                </div>
+                <div class="card-body">
+                    <div class="card-header">This is a product</div>
+                    <div class="card-price">250$</div>
+                    <button type="button" class="card-btn">Add (+)</button>
+                    <button type="button" class="cart-rm-btn">Remove ( - )</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-t-value">
+            <div class="t-header">Qyt</div>
+            <div class="t-header">Total</div>
+            <div class="t-value">>>&emsp;3</div>
+            <div class="t-value">>>&emsp;$950TK</div>
+        </div>
+        <button type="submit" class="cart-co-btn">Check Out</button>
+    </form>
+    <!-- navbar end -->
+    <!-- All content -->
+    {% block main %}
+    <section id="main_container">
+        <!-- Introduction container -->
+        <div id="intro-cont">
+            <div class="container">
+                <span id="big_text">
+                    Experience Your <br>
+                    Dream Shopping <br>
+                    online
+                </span>
+                <span id="small_text">
+                    Get Product from around the world
+                </span>
+                <a href="#latest_product" id="shop_now-btn" class="btn-white">Shop now</a>
+            </div>
+        </div>
+        <!-- Introduction container end -->
+        <!-- Latest Product Start -->
+        <div id="latest_product">
+            <h1>limited Edition Product</h1>
+            <div class="container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/1.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/2.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/3.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/4.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/1.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/4.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="/static/img/dummy/3.jpg" alt="product_view">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">This is a product</div>
+                        <div class="card-price">250$</div>
+                        <button class="card-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Latest Product End -->
+            <a href="#" class="btn-black">Shop All</a>
+        </div>
+        <!-- Comment Section -->
+        <div id="comment_section">
+            <h1>#Comments</h1>
+            <div class="container">
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/dummy/1.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/shop-1.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/dummy/1.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/dummy/2.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/dummy/3.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/dummy/4.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/shop-1.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+                <div class="comment-card">
+                    <div class="img-cont">
+                        <img src="/static/img/shop-2.jpg" alt="">
+                    </div>
+                    <a href="#" class="comment-detail">
+                        #Comment is here
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock main %}
+    <!-- Footer Section -->
+    <section id="footer">
+        <div class="main_footer">
+            <ul class="menu">
+                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Shop</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">About us</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Logout</a></li>
+            </ul>
+            <ul class="extra-menu">
+                <li class="menu-item"><a href="" class="menu-link">FAQ</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Shipping & Return</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Store Policy</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Payment Method</a></li>
+            </ul>
+            <form action="" class="subscribe">
+                <div>
+                    <label for="subscribe_input" class="subscribe_label">Enter your email here *</label>
+                    <div class="inner-cont">
+                        <input type="email" name="subscribe_input" id="subscribe_input" class="subscribe_input">
+                        <button type="submit" id="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <span>
+                &copy;2022 created by Nurul Hafiz Likhon
+            </span>
+        </div>
+    </section>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
