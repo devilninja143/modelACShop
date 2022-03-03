@@ -7,7 +7,6 @@ function event_collapse(e){
     document.querySelector(tar).classList.toggle("collapse");
 }
 setTimeout(()=>{
-    document.querySelector("#loading_screen").style.display = "none!important";
-    console.log("timeout")
+    document.querySelector("#loading_screen").style.display = "none";
 },6000);
 // toggler cont

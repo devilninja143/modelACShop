@@ -1,0 +1,2 @@
+release: python manage.py migrate
+web: gunicorn ex_shop.wsgi --log-file -
